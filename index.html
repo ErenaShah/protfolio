@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta chardet="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Portfolio Page</title>
+    </head>
+    <body>
+        <div class="bg-black v-[100vw] h-[100vh] relative font-serif">
+            <!-- <div class="absolute top-5 left-96 w-52 h-52 rounded-full bg-rose-500 animate-circle1 shadow-lg"></div> -->
+            <div class="absolute top-5 left-96 w-52 h-52 rounded-full bg-rose-500 animate-circle1 shadow-2xl shadow-rose-800"></div>
+            <div class="absolute bottom-5 right-96 w-72 h-72 rounded-full bg-violet-700 animate-circle2 mix-blend-lighten shadow-2xl shadow-violet-800"></div>
+            <div class="w-96 h-4/5 border-2 border-zinc-800 flex flex-col rounded-2xl bg-zinc-900 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+            <div class="rounded-s-full h-1/2 w-1/2 pt-7">
+                <img class="rounded-full" src="profilepic.jpg">
+            </div>
+            <div class="text-bold text-white text-3xl font-serif">
+                Erena Shah
+            </div>
+            <div class="pt-7 text-2xl text-center font-serif text-slate-600">
+                Student @ <br> Nirma University
+            </div>
+            <div class="pt-7 font-serif flex flex-rox gap-4">
+                <button onclick="openModal()" class="border-2 border-white text-white px-4 pt-2 pb-2 rounded-2xl hover:bg-white hover:text-black">Share My Profile</button>
+                <button class="border-2 border-white text-white px-4 pt-2 pb-2 rounded-2xl hover:bg-white hover:text-black">Follow Me</button>
+            </div>
+        </div>
+        <div id="modal1" class="bg-black w-1/3 h-48 flex flex-col items-center gap-6 border-2 border-zinc-800 rounded-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 " >
+            <div class="flex flex-row mt-7">
+                <div class="text-white text-3xl">Share this via</div>
+                <div onclick="closeModal()" class="text-white ml-48"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+            </div>
+            <div class="flex felx-row gap-6">
+                <div class="text-rose-600 w-16 h-16 border-2 border-rose-600 rounded-full hover:text-white hover:bg-rose-600">
+                    <div class="flex flex-row mt-4 justify-center">
+                    <a href="#" class="icon" id="facebook">
+                    <i class="fa-brands fa-facebook-f fa-2xl"></i></a></div>
+                </div>
+                <div class="text-blue-700 w-16 h-16 border-2 border-blue-700 rounded-full hover:text-white hover:bg-blue-700">
+                    <div class="flex flex-row mt-4 justify-center">
+                    <a href="#" class="icon" id="twitter">
+                    <i class="fa-brands fa-twitter fa-2xl"></i></a></div>
+                </div>
+                <div class="text-green-600 w-16 h-16 border-2 border-green-600 rounded-full hover:text-white hover:bg-green-600">
+                    <div class="flex flex-row mt-5 justify-center">
+                    <a href="#" class="icon" id="instagram">
+                    <i class="fa-brands fa-instagram fa-2xl"></i></a></div>
+                </div>
+                <div class="text-sky-600 w-16 h-16 border-2 border-sky-600 rounded-full hover:text-white hover:bg-sky-600">
+                    <div class="flex flex-row mt-4 justify-center">
+                    <a href="#" class="icon" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp fa-2xl"></i></a></div>
+                </div>
+                <div class="text-yellow-600 w-16 h-16 border-2 border-yellow-600 rounded-full hover:text-white hover:bg-yellow-600">
+                    <div class="flex flex-row mt-5 justify-center">
+                    <a href="#" class="icon" id="telegram">
+                    <i class="fa-brands fa-telegram fa-2xl"></i></a></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+        <script>
+            const modal = document.querySelector("#modal1");
+            function openModal() {
+                console.log("modal is open");
+                modal.style.transition = "opacity 0.5s ease-in-out";
+                console.log("1");
+                modal.style.opacity = 1;
+                console.log("2");
+            };
+            function closeModal() {
+                console.log("modal is close");
+                modal.style.transition = "opacity 0.5s ease-in-out";
+                modal.style.opacity = 0;
+            };
+        </script>
+    </body>
+</html>
